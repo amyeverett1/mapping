@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Add participant data to a project
+      </h1>
+
+      <form class="form" action="/form" method="post">
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Please select your project name
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Right to Work</option>
+    <option value="updated" selected>EU Exit</option>
+    <option value="views">Electronic Visa Waiver</option>
+  </select>
+</div>
+
+
+        <button class="govuk-button">Continue</button>
+
+
+<a class="link" href="input2">My project isn't listed here</a>
+
+    </div>
+  </div>
+
+{% endblock %}

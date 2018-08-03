@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="index.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">View participant data from a project
+      </h1>
+
+      <form class="form" action="/view_data" method="post">
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Please select your project name
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="updated" selected>All Home Office projects</option>
+    <option value="published">Right to Work</option>
+    <option value="updated">EU Exit</option>
+    <option value="views">Electronic Visa Waiver</option>
+  </select>
+</div>
+
+
+        <button class="govuk-button">Continue</button>
+
+    </div>
+  </div>
+
+{% endblock %}

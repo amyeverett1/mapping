@@ -1,0 +1,73 @@
+#
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/submit" method="post">
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+Add your participant's access needs
+      </legend>
+      <span id="nationality-hint" class="govuk-hint">
+         Select all options that are relevant to your participant.
+       </span>
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+          Hearing
+        </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+          Physical and Mobility
+        </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+          Thinking and Feeling
+        </label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+          Vision
+        </label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+          <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+          Other
+        </label>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+                <button class="govuk-button">Submit participant</button>
+    </form>
+    </div>
+  </div>
+
+{% endblock %}
